@@ -43,5 +43,15 @@ namespace TanasFuarcilik
                 Console.WriteLine("E-posta gönderilirken bir hata oluştu: " + ex.Message);
             }
         }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+            string senderEmail = "sender@example.com"; // Gönderenin e-posta adresi
+            string senderName = "Sender Name"; // Gönderenin adı
+            string subject = "Email Subject"; // E-posta konusu
+            string message = "Email message"; // E-posta mesajı
+
+            SendEmail(senderEmail, senderName, subject, message);
+        }
     }
 }

@@ -37,7 +37,7 @@
                     <p>Tanas Fuarcılık olarak, müşterilerimizin memnuniyetini ve başarısını her zaman en öncelikli hedef olarak görüyoruz. Yenilikçi yaklaşımımız, uzman ekibimiz ve sektördeki deneyimimizle, fuar organizasyonlarınızı daha etkileyici ve başarılı hale getirmek için buradayız.</p>
                 </div>
                 <div class="col-lg-6 mt-4 mt-lg-0 d-flex justify-content-center align-items-center">
-                    <img loading="lazy" class="img-fluid" src="images/about/about.jpg" alt="">
+                    <img loading="lazy" class="img-fluid" src="images/about/about.jpeg" alt="">
                 </div>
             </div>
         </div>

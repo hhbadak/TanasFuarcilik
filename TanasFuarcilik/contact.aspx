@@ -71,8 +71,9 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form col-md-6 ">
-                    <form id="contact-form" runat="server" method="post" role="form">
+                    <form id="form" runat="server" method="post" role="form">
                         <div class="form-group mb-4">
+
                             <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
                         </div>
 
@@ -88,8 +89,7 @@
                             <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
                         </div>
                         <div id="cf-submit">
-                            <input>
-                            <asp:LinkButton type="submit" ID="contact-submit" class="btn btn-transparent" value="Submit" runat="server" OnClick="contact-submit_Click" />
+                            <asp:LinkButton type="submit" ID="submit" class="btn btn-transparent" placeholder="Gönder" value="Submit" runat="server" OnClick="submit_Click" />
                         </div>
 
                     </form>

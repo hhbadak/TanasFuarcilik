@@ -15,21 +15,21 @@ namespace TanasFuarcilik
     {
 
         /// <summary>
-        /// contact-form control.
+        /// form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm contact-form;
-        
+        protected global::System.Web.UI.HtmlControls.HtmlForm form;
+
         /// <summary>
-        /// contact-submit control.
+        /// submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton contact-submit;
+        protected global::System.Web.UI.WebControls.LinkButton submit;
     }
 }
