@@ -5,46 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="hero-slider">
-        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital
-                            <br>
-                            Experience</h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                            Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Quod,
-                            <br>
-                            veritatis tempore nostrum id
-						officia quaerat eum corrupti,
-                            <br>
-                            ipsa aliquam velit.
-                        </p>
-                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                            href="service.html">Explore Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design
-                            <br>
-                            and
-						Creativity</h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">
-                            Create just what you need
-						for your Perfect Website. Choose from a wide range
-						<br>
-                            of Elements & simply put them on our Canvas.
-                        </p>
-                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                            href="service.html">Explore Us</a>
-                    </div>
-                </div>
+
+        <div class="mx-auto">
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" src="videos/tanas.mp4" autoplay loop muted></video>
             </div>
         </div>
     </div>
@@ -56,26 +20,27 @@
                 <div class="col-lg-8" id="ozel-tasarim">
                     <article class="post">
                         <div class="hero-slider">
-                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg); height: 400px !important">
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/bandirma01.jpg); height: 400px !important">
                             </div>
-                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg); height: 400px !important">
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/bandirma02.jpg); height: 400px !important">
+                            </div>
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/bandirma03.jpg); height: 400px !important">
+                            </div>
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/bandirma04.jpg); height: 400px !important">
                             </div>
                         </div>
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <h3>Cras Sed Elit Sit Amet.</h3>
+                            <h3>Özel Tasarım Fuar Stantları Nedir?</h3>
 
                             <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque laudantium totam rem aperiam
-              eaque ipsa quae ab illo inventore veritatis et quasi archite beatae vitae dicta sunt explicabo. nemo enim ipsam
-              voluptatem quia voluptassit.aspernatur aut odit aut fugit.
+                                Özel Tasarım Fuar Stantları, genellikle markanın kurumsal kimliğine ve pazarlama stratejisine uygun olarak tasarlanır. Bu stantlar, markanın renkleri, logoları ve görsel unsurlarıyla özelleştirilebilir. Ayrıca, stantta kullanılacak malzemeler, mobilyalar, aydınlatma ve diğer öğeler, markanın mesajını ve tarzını yansıtmak üzere özenle seçilir.
+
+
                             </p>
                             <p>
-                                Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque poro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-              labore et dolore magnam aliquam quaerat voluptatem
+                                Bu stantlar, profesyonel tasarımcılar ve fuarcılık şirketleri tarafından özel olarak tasarlanır ve üretilir. Tasarım süreci genellikle bilgisayar destekli tasarım (CAD) yazılımları kullanılarak başlar.
                             </p>
                         </div>
                     </article>
@@ -83,64 +48,27 @@
                 <div class="col-lg-8" id="maxima">
                     <article class="post">
                         <div class="hero-slider">
-                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg); height: 400px !important">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital
-                            <br>
-                                                Experience</h1>
-                                            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                                                Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Quod,
-                            <br>
-                                                veritatis tempore nostrum id
-						officia quaerat eum corrupti,
-                            <br>
-                                                ipsa aliquam velit.
-                                            </p>
-                                            <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                                                href="service.html">Explore Us</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/musiad01.jpg); height: 400px !important">
                             </div>
-                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg); height: 400px !important">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design
-                            <br>
-                                                and
-						Creativity</h1>
-                                            <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">
-                                                Create just what you need
-						for your Perfect Website. Choose from a wide range
-						<br>
-                                                of Elements & simply put them on our Canvas.
-                                            </p>
-                                            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                                                href="service.html">Explore Us</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/musiad02.jpg); height: 400px !important">
+                            </div>
+                            <div class="slider-item th-fullpage hero-area" style="background-image: url(images/portfolio/musiad03.jpg); height: 400px !important">
                             </div>
                         </div>
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <h3>Cras Sed Elit Sit Amet.</h3>
+                            <h3>Maksima Stant Nedir?</h3>
 
                             <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque laudantium totam rem aperiam
-              eaque ipsa quae ab illo inventore veritatis et quasi archite beatae vitae dicta sunt explicabo. nemo enim ipsam
-              voluptatem quia voluptassit.aspernatur aut odit aut fugit.
+                                Maxima Stant, birbirine bağlanabilen ve farklı şekillerde kurulabilen alüminyum profillerden oluşur. Bu profiller, standın istenilen boyut ve şekilde montajını sağlar. Ayrıca, Maxima Stant'ın üzerine tekstil veya PVC malzemeler gerilebilir, baskılar veya grafikler uygulanabilir. Bu sayede markanın veya şirketin tanıtımını yapmak için görsel bir platform sağlar.
                             </p>
                             <p>
-                                Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque poro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-              labore et dolore magnam aliquam quaerat voluptatem
+                                Maxima Stant, kolay taşınabilir ve kurulumu hızlı olan bir sistemdir. Modüler yapısı sayesinde standın boyutları ve şekli değiştirilebilir, farklı etkinliklere uyum sağlayabilir.
+                            </p>
+                            <p>
+                                Fuarcılık sektöründe Maxima Stant sıklıkla tercih edilen bir seçenektir çünkü esneklik, taşınabilirlik ve kurulum kolaylığı sunar. Ayrıca, görsel olarak etkileyici bir sunum sağlamak için marka ve grafiklerin sergilenmesine olanak tanır.
+
                             </p>
                         </div>
                     </article>
@@ -149,63 +77,20 @@
                     <article class="post">
                         <div class="hero-slider">
                             <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg); height: 400px !important">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital
-                            <br>
-                                                Experience</h1>
-                                            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                                                Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Quod,
-                            <br>
-                                                veritatis tempore nostrum id
-						officia quaerat eum corrupti,
-                            <br>
-                                                ipsa aliquam velit.
-                                            </p>
-                                            <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                                                href="service.html">Explore Us</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg); height: 400px !important">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design
-                            <br>
-                                                and
-						Creativity</h1>
-                                            <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">
-                                                Create just what you need
-						for your Perfect Website. Choose from a wide range
-						<br>
-                                                of Elements & simply put them on our Canvas.
-                                            </p>
-                                            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                                                href="service.html">Explore Us</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
                         <!-- Post Content -->
                         <div class="post-content">
-                            <h3>Cras Sed Elit Sit Amet.</h3>
+                            <h3>Moduler Fuar Stantı Nedir?</h3>
 
                             <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque laudantium totam rem aperiam
-              eaque ipsa quae ab illo inventore veritatis et quasi archite beatae vitae dicta sunt explicabo. nemo enim ipsam
-              voluptatem quia voluptassit.aspernatur aut odit aut fugit.
+                                Modüler Fuar Stantları, fuarlar, sergiler ve etkinlikler için kullanılan ve modüler yapıları sayesinde farklı boyutlarda ve şekillerde uyarlanabilen stantlardır. Bu stantlar, birbirine bağlanabilen ve değiştirilebilir parçalardan oluşur, böylece farklı stand alanlarına ve ihtiyaçlara uyum sağlayabilirler.
                             </p>
                             <p>
-                                Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque poro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-              labore et dolore magnam aliquam quaerat voluptatem
+                                Modüler Fuar Stantları genellikle alüminyum veya benzeri hafif malzemelerden üretilir. Bu malzemeler, taşınabilirlik, dayanıklılık ve montaj kolaylığı sağlar. Standın temel bileşenleri, genellikle profiller, bağlantı elemanları ve panellerdir.
                             </p>
                         </div>
                     </article>
@@ -240,9 +125,9 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="single-post.html">
-                                            <h5>Condentum Quam Vitae Ligu. tempor bibendum.</h5>
+                                            <h5>Deneme Deneme</h5>
                                         </a>
-                                        <h6>Aug 20, 2018</h6>
+                                        <h6>18.01.2024</h6>
                                     </div>
                                 </li>
                                 <li class="widget-post-list-item">
@@ -253,9 +138,9 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="single-post.html">
-                                            <h5>Condentum Quam Vitae Ligu. tempor bibendum.</h5>
+                                            <h5>Deneme Deneme</h5>
                                         </a>
-                                        <h6>Aug 20, 2018</h6>
+                                        <h6>18.01.2024</h6>
                                     </div>
                                 </li>
                                 <li class="widget-post-list-item">
@@ -266,9 +151,9 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="single-post.html">
-                                            <h5>Condentum Quam Vitae Ligu. tempor bibendum.</h5>
+                                            <h5>Deneme Deneme</h5>
                                         </a>
-                                        <h6>Aug 20, 2018</h6>
+                                        <h6>18.01.2024</h6>
                                     </div>
                                 </li>
                             </ul>

@@ -109,6 +109,13 @@
     <Content Include="images\favicon.png" />
     <Content Include="images\logo-white.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\portfolio\bandirma01.jpg" />
+    <Content Include="images\portfolio\bandirma02.jpg" />
+    <Content Include="images\portfolio\bandirma03.jpg" />
+    <Content Include="images\portfolio\bandirma04.jpg" />
+    <Content Include="images\portfolio\musiad01.jpg" />
+    <Content Include="images\portfolio\musiad02.jpg" />
+    <Content Include="images\portfolio\musiad03.jpg" />
     <Content Include="images\portfolio\portfolio-1.jpg" />
     <Content Include="images\portfolio\portfolio-2.jpg" />
     <Content Include="images\portfolio\portfolio-3.jpg" />
@@ -150,6 +157,9 @@
     <Content Include="plugins\slick\slick.min.js" />
     <Content Include="plugins\smooth-scroll\smooth-scroll.min.js" />
     <Content Include="plugins\themefisher-font\style.css" />
+    <Content Include="portfolio.aspx" />
+    <Content Include="service.aspx" />
+    <Content Include="videos\tanas.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -181,7 +191,21 @@
     <Compile Include="index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
+    <Compile Include="portfolio.aspx.cs">
+      <DependentUpon>portfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="portfolio.aspx.designer.cs">
+      <DependentUpon>portfolio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="service.aspx.designer.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css.map" />
