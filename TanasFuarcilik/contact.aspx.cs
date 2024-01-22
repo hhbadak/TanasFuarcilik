@@ -18,8 +18,8 @@ namespace TanasFuarcilik
         }
         public void SendEmail(string senderEmail, string senderName, string subject, string message)
         {
-            string email = "your-email@example.com"; // Gönderici e-posta adresi
-            string password = "your-password"; // Gönderici e-posta şifresi
+            string email = "hsnhsyn_esk@hotmail.com"; // Gönderici e-posta adresi
+            string password = "493052Hhb-"; // Gönderici e-posta şifresi
 
             MailMessage mail = new MailMessage();
             SmtpClient smtpClient = new SmtpClient("smtp.example.com"); // SMTP sunucusu bilgilerini buraya girin

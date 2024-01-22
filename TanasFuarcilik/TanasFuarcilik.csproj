@@ -125,6 +125,21 @@
     <Content Include="images\portfolio\portfolio-7.jpg" />
     <Content Include="images\portfolio\portfolio-8.jpg" />
     <Content Include="images\pricing-bg.jpg" />
+    <Content Include="images\service\advert-1.jpg" />
+    <Content Include="images\service\advert-2.jpg" />
+    <Content Include="images\service\advert-3.jpg" />
+    <Content Include="images\service\congress-1.jpg" />
+    <Content Include="images\service\congress-2.jpg" />
+    <Content Include="images\service\congress-3.jpg" />
+    <Content Include="images\service\design-1.jpg" />
+    <Content Include="images\service\design-2.jpg" />
+    <Content Include="images\service\design-3.jpg" />
+    <Content Include="images\service\product-1.jpg" />
+    <Content Include="images\service\product-2.jpg" />
+    <Content Include="images\service\product-3.jpg" />
+    <Content Include="images\service\shopping-1.jpg" />
+    <Content Include="images\service\shopping-2.jpg" />
+    <Content Include="images\service\shopping-3.jpg" />
     <Content Include="images\slider\call-to-action-bg.jpg" />
     <Content Include="images\slider\slider-bg-1.jpg" />
     <Content Include="images\slider\slider-bg-2.jpg" />
@@ -210,6 +225,7 @@
   <ItemGroup>
     <Content Include="css\style.css.map" />
     <Content Include="index.Master" />
+    <Content Include="data\katalog.pdf" />
     <None Include="packages.config" />
     <Content Include="plugins\lightbox2\js\lightbox-plus-jquery.min.map" />
     <Content Include="plugins\lightbox2\js\lightbox.min.map" />

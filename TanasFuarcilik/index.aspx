@@ -31,7 +31,7 @@
                         </div>
 
                         <!-- Post Content -->
-                        <div class="post-content">
+                        <div class="post-content mt-4">
                             <h3>Özel Tasarım Fuar Stantları Nedir?</h3>
 
                             <p>
@@ -57,7 +57,7 @@
                         </div>
 
                         <!-- Post Content -->
-                        <div class="post-content">
+                        <div class="post-content mt-4">
                             <h3>Maksima Stant Nedir?</h3>
 
                             <p>
@@ -83,7 +83,7 @@
                         </div>
 
                         <!-- Post Content -->
-                        <div class="post-content">
+                        <div class="post-content mt-4">
                             <h3>Moduler Fuar Stantı Nedir?</h3>
 
                             <p>
@@ -111,7 +111,7 @@
                                 <li>
                                     <a href="#moduler">Moduler Fuar Stantları</a>
                                 </li>
-                            </ul>
+                            </ul> 
                         </div>
                         <div class="widget-post widget">
                             <h2>Yaklaşan Fuarlar</h2>

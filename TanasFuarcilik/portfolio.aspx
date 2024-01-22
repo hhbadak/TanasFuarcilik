@@ -8,10 +8,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Portfolio</h2>
+                    <h2>Yaptığımız İşler</h2>
                     <ol class="breadcrumb header-bradcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+                        <li class="breadcrumb-item"><a href="index.aspx" class="text-white">Anasayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Referanslarımız</li>
                     </ol>
                 </div>
             </div>
@@ -27,10 +27,9 @@
                 <div class="col-xl-6 col-lg-8">
                     <!-- section title -->
                     <div class="title text-center">
-                        <h2>Our Works</h2>
+                        <h2>Çalışmalarımız</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, veritatis. Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Minima, vitae?
+                            Çalışmalarımız, fuarcılık sektöründeki deneyimimiz ve uzmanlığımızla, müşterilerimize etkileyici etkinlikler ve başarılı fuarlar sunma misyonuyla gerçekleştirilmektedir. Yaratıcı tasarımlarımız ve özelleştirilmiş çözümlerimizle, unutulmaz ve etkileyici deneyimler sağlamak için çalışıyoruz.
                         </p>
                         <div class="border"></div>
                     </div>
@@ -42,11 +41,10 @@
                 <div class="col-lg-12">
 
                     <div class="portfolio-filter">
-                        <button type="button" data-filter="all">All</button>
-                        <button type="button" data-filter="photography">Photography</button>
-                        <button type="button" data-filter="ios">IOS App</button>
-                        <button type="button" data-filter="development">Development</button>
-                        <button type="button" data-filter="design">Design</button>
+                        <button type="button" data-filter="all">Hepsi</button>
+                        <button type="button" data-filter="special">Özel Tasarım Fuar Stantları</button>
+                        <button type="button" data-filter="maxima">Maksima Fuar Stantları</button>
+                        <button type="button" data-filter="moduler">Moduler Fuar Stantları</button>
                     </div>
 
                     <div class="row">

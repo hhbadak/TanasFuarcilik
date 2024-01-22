@@ -12,9 +12,9 @@
     <!-- Mobile Specific Metas
   ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="One page parallax responsive HTML Template">
+     <meta name="description" content="Tanas Bilişim, yayıncılık ve fuar hizmetleri sunan bir şirkettir. Faaliyet alanlarımız arasında web tasarımı, yazılım geliştirme, dijital pazarlama ve fuar organizasyonları bulunmaktadır. İşletmeniz için çözümler sunmak için buradayız.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="author" content="Themefisher">
+    <meta name="authors" content="HHBadak, Appsoly">
     <meta name="generator" content="Themefisher Bingo HTML Template v1.0">
 
     <!-- Favicon -->
@@ -81,29 +81,33 @@ Fixed Navigation
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown02" role="button" data-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="service.aspx" id="navbarDropdown02" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Hizmetlerimiz <i class="tf-ion-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown02">
+                                <li><a class="dropdown-item" href="service.aspx#design">Tasarım</a></li>
+                                <li><a class="dropdown-item" href="service.aspx#shoppingCentre">Mağaza Tasarımları</a></li>
+                                <li><a class="dropdown-item" href="service.aspx#product">Üretim ve Planlama</a></li>
+                                <li><a class="dropdown-item" href="service.aspx#congress">Kongre & Konferans Tasarımları</a></li>
+                                <li><a class="dropdown-item" href="service.aspx#advert">Reklam Tanıtım Hizmetleri</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="service.aspx" id="navbarDropdown03" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Fuar Stantları <i class="tf-ion-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown02">
-                                <li><a class="dropdown-item" href="404.html">Tasarım</a></li>
-                                <li><a class="dropdown-item" href="blog.html">Mağaza Tasarımları</a></li>
-                                <li><a class="dropdown-item" href="single-post.html">Üretim ve Planlama</a></li>
-                                <li><a class="dropdown-item" href="single-post.html">Kongre & Konferans Tasarımları</a></li>
-                                <li><a class="dropdown-item" href="single-post.html">Reklam Tanıtım Hizmetleri</a></li>
 
-                                <li class="dropdown dropdown-submenu dropleft">
-                                    <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0201" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fuar Stant Tasarım ve Uygulamaları<i class="tf-ion-chevron-down"></i></a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="dropdown0201">
-                                        <li><a class="dropdown-item" href="index.html">Özel Tasarım Fuar Standı</a></li>
-                                        <li><a class="dropdown-item" href="index.html">Maxima Fuar Standı</a></li>
-                                        <li><a class="dropdown-item" href="index.html">Moduler Fuar Standı</a></li>
-                                    </ul>
-                                </li>
+                                <li><a class="dropdown-item" href="index.html">Özel Tasarım Fuar Standı</a></li>
+                                <li><a class="dropdown-item" href="index.html">Maxima Fuar Standı</a></li>
+                                <li><a class="dropdown-item" href="index.html">Moduler Fuar Standı</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="about.aspx">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="portfolio.aspx">Referanslarımız</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="contact.aspx">İletişim</a>
