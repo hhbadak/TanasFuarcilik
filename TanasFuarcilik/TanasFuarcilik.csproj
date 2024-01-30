@@ -174,6 +174,20 @@
     <Content Include="plugins\themefisher-font\style.css" />
     <Content Include="portfolio.aspx" />
     <Content Include="service.aspx" />
+    <Content Include="TopManagementPanel\css\app.css" />
+    <Content Include="TopManagementPanel\img\avatars\avatar-2.jpg" />
+    <Content Include="TopManagementPanel\img\avatars\avatar-3.jpg" />
+    <Content Include="TopManagementPanel\img\avatars\avatar-4.jpg" />
+    <Content Include="TopManagementPanel\img\avatars\avatar-5.jpg" />
+    <Content Include="TopManagementPanel\img\avatars\avatar.jpg" />
+    <Content Include="TopManagementPanel\img\icons\icon-48x48.png" />
+    <Content Include="TopManagementPanel\img\photos\unsplash-1.jpg" />
+    <Content Include="TopManagementPanel\img\photos\unsplash-2.jpg" />
+    <Content Include="TopManagementPanel\img\photos\unsplash-3.jpg" />
+    <Content Include="TopManagementPanel\index.aspx" />
+    <Content Include="TopManagementPanel\js\app.js" />
+    <Content Include="TopManagementPanel\js\app.js.LICENSE.txt" />
+    <Content Include="TopManagementPanel\profile.aspx" />
     <Content Include="videos\tanas.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -221,6 +235,27 @@
     <Compile Include="service.aspx.designer.cs">
       <DependentUpon>service.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TopManagementPanel\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopManagementPanel\index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TopManagementPanel\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css.map" />
@@ -235,6 +270,10 @@
     <Content Include="plugins\themefisher-font\fonts\themefisher-font.eot" />
     <Content Include="plugins\themefisher-font\fonts\themefisher-font.ttf" />
     <Content Include="plugins\themefisher-font\fonts\themefisher-font.woff" />
+    <Content Include="TopManagementPanel\css\app.css.map" />
+    <Content Include="TopManagementPanel\fonts\.gitkeep" />
+    <Content Include="TopManagementPanel\js\app.js.map" />
+    <Content Include="TopManagementPanel\index.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

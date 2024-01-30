@@ -98,9 +98,9 @@ Fixed Navigation
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown02">
 
-                                <li><a class="dropdown-item" href="index.html">Özel Tasarım Fuar Standı</a></li>
-                                <li><a class="dropdown-item" href="index.html">Maxima Fuar Standı</a></li>
-                                <li><a class="dropdown-item" href="index.html">Moduler Fuar Standı</a></li>
+                                <li><a class="dropdown-item" href="index.aspx#ozel-tasarim">Özel Tasarım Fuar Standı</a></li>
+                                <li><a class="dropdown-item" href="index.aspx#maxima">Maxima Fuar Standı</a></li>
+                                <li><a class="dropdown-item" href="index.aspx#moduler">Moduler Fuar Standı</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ">
