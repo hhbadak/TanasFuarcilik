@@ -181,13 +181,16 @@
     <Content Include="TopManagementPanel\img\avatars\avatar-5.jpg" />
     <Content Include="TopManagementPanel\img\avatars\avatar.jpg" />
     <Content Include="TopManagementPanel\img\icons\icon-48x48.png" />
+    <Content Include="TopManagementPanel\img\personnel\none.png" />
     <Content Include="TopManagementPanel\img\photos\unsplash-1.jpg" />
     <Content Include="TopManagementPanel\img\photos\unsplash-2.jpg" />
     <Content Include="TopManagementPanel\img\photos\unsplash-3.jpg" />
     <Content Include="TopManagementPanel\index.aspx" />
     <Content Include="TopManagementPanel\js\app.js" />
     <Content Include="TopManagementPanel\js\app.js.LICENSE.txt" />
+    <Content Include="TopManagementPanel\personnel.aspx" />
     <Content Include="TopManagementPanel\profile.aspx" />
+    <Content Include="TopManagementPanel\SignIn.aspx" />
     <Content Include="videos\tanas.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -249,12 +252,26 @@
     <Compile Include="TopManagementPanel\index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
+    <Compile Include="TopManagementPanel\personnel.aspx.cs">
+      <DependentUpon>personnel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\personnel.aspx.designer.cs">
+      <DependentUpon>personnel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TopManagementPanel\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TopManagementPanel\profile.aspx.designer.cs">
       <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopManagementPanel\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +297,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{63173350-64cd-422d-a2c2-037e9b821330}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -116,3 +116,5 @@ C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\obj\Debug\
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\obj\Debug\TanasFuarcilik.csproj.CopyComplete
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\obj\Debug\TanasFuarcilik.dll
 C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\obj\Debug\TanasFuarcilik.pdb
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\bin\DataAccessLayer.dll
+C:\Users\HsnHs\OneDrive\Belgeler\GitHub\TanasFuarcilik\TanasFuarcilik\bin\DataAccessLayer.pdb
