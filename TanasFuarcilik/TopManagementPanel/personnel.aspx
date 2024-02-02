@@ -8,6 +8,7 @@
             <div class="card flex-fill">
                 <div class="card-header">
                     <h5 class="card-title mb-0">Personeller</h5>
+                    <a href="../TopManagementPanel/addPersonnel.aspx" type="button" class="btn btn-dark" style="float: right;">Personel Ekle</a>
                 </div>
 
                 <asp:ListView ID="lv_personnelList" runat="server" OnItemCommand="lv_personnelList_ItemCommand">
@@ -39,7 +40,12 @@
                             <td><a href="mailto:<%# Eval("EMail") %>"><%# Eval("EMail") %></a></td>
                             <td><%# Eval("Address") %></td>
                             <td>
-                                <img src="img/personnel/<%# Eval("Image") %>" /></td>
+                                <img src="../TopManagementPanel/img/personnel/<%# Eval("Image") %>" /></td>
+                            <td>
+                                <a href="../TopManagementPanel/personnelSetting.aspx?mid=<%# Eval("ID") %>">
+                                    <img src="../TopManagementPanel/img/icons/edit.png" alt="Güncelle" /></a>
+                                <asp:LinkButton ID="lbtn_delete" runat="server" CommandArgument='<%# Eval("ID") %>' CommandName="delete"><img src="../TopManagementPanel/img/icons/delete.png" alt="Sil" /></asp:LinkButton>
+                            </td>
                         </tr>
                     </ItemTemplate>
                 </asp:ListView>

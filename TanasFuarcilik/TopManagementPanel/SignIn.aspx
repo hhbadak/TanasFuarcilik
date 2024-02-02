@@ -56,6 +56,13 @@
                 </div>
             </div>
         </main>
+        <script>
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    document.getElementById("<%= lbtn_login.ClientID %>").click();
+        }
+    });
+        </script>
     </form>
     <script src="../TopManagementPanel/js/app.js"></script>
 </body>

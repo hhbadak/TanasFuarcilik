@@ -22,7 +22,7 @@ namespace TanasFuarcilik.TopManagementPanel
             Personnel p = dm.PersonnelLogin(tb_username.Text, tb_password.Text);
             if (p != null)
             {
-                Session["uye"] = p;
+                Session["person"] = p;
 
                 if (Session["link"] == null)
                 {

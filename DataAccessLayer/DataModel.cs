@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Policy;
+using System.Runtime.Remoting.Messaging;
 
 namespace DataAccessLayer
 {
@@ -42,12 +43,13 @@ namespace DataAccessLayer
                         p.Name = reader.GetString(1);
                         p.Surname = reader.GetString(2);
                         p.Password = reader.GetString(3);
-                        p.PhoneNumber = reader.GetString(4);
-                        p.EMail = reader.GetString(5);
-                        p.Address = reader.GetString(6);
-                        p.Image = reader.GetString(7);
-                        p.StatuID = reader.GetInt32(8);
-                        p.Statu = reader.GetBoolean(9);
+                        p.Mission = reader.GetString(4);
+                        p.PhoneNumber = reader.GetString(5);
+                        p.EMail = reader.GetString(6);
+                        p.Address = reader.GetString(7);
+                        p.Image = reader.GetString(8);
+                        p.StatuID = reader.GetInt32(9);
+                        p.Statu = reader.GetBoolean(10);
                     }
                     return p;
                 }
@@ -97,6 +99,131 @@ namespace DataAccessLayer
             {
                 con.Close();
             }
+        }
+
+        public Personnel GetPersonnel(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT ID, Name, Surname, Password, Mission, PhoneNumber, EMail, Address, Img FROM Personnel WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                Personnel p = new Personnel();
+                while (reader.Read())
+                {
+                    p.ID = reader.GetInt32(0);
+                    p.Name = reader.GetString(1);
+                    p.Surname = reader.GetString(2);
+                    p.Password = reader.GetString(3);
+                    p.Mission = reader.GetString(4);
+                    p.PhoneNumber = reader.GetString(5);
+                    p.EMail = reader.GetString(6);
+                    p.Address = reader.GetString(7);
+                    p.Image = reader.GetString(8);
+                }
+                return p;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool PersonnelSetting(Personnel p)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Personnel SET Name = @name, Surname = @surname, Password = @password, Mission = @mission, PhoneNumber = @phone, EMail = @mail, Address = @address, Img = @img WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", p.ID);
+                cmd.Parameters.AddWithValue("@name", p.Name);
+                cmd.Parameters.AddWithValue("@surname", p.Surname);
+                cmd.Parameters.AddWithValue("@password", p.Password);
+                cmd.Parameters.AddWithValue("@mission", p.Mission);
+                cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
+                cmd.Parameters.AddWithValue("@mail", p.EMail);
+                cmd.Parameters.AddWithValue("@address", p.Address);
+                cmd.Parameters.AddWithValue("@img", p.Image);
+
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool PersonnelCreate(Personnel p)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Personnel(Name, Surname, Password, Mission, PhoneNumber, EMail, Address, Img, StatuID, Status) VALUES (@name, @surname, @password, @mission, @phone, @mail, @address, @img, @statuID @statu)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name", p.Name);
+                cmd.Parameters.AddWithValue("@surname", p.Surname);
+                cmd.Parameters.AddWithValue("@password", p.Password);
+                cmd.Parameters.AddWithValue("@mission", p.Mission);
+                cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
+                cmd.Parameters.AddWithValue("@mail", p.EMail);
+                cmd.Parameters.AddWithValue("@address", p.Address);
+                cmd.Parameters.AddWithValue("@img", p.Image);
+                cmd.Parameters.AddWithValue("@statuID", p.StatuID);
+                cmd.Parameters.AddWithValue("@statu", p.Statu);
+                con.Open();
+                cmd.ExecuteReader();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
+
+        #region Status
+        public List<Status> StatuList()
+        {
+            List<Status> statu = new List<Status>();
+            try
+            {
+                cmd.CommandText = "SELECT ID, Name FROM Status";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Status s = new Status();
+                    s.ID = reader.GetInt32(0);
+                    s.Name = reader.GetString(1);
+                    statu.Add(s);
+                }
+                return statu;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
         }
         #endregion
     }

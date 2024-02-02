@@ -23,7 +23,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <div class="wrapper">
             <nav id="sidebar" class="sidebar js-sidebar">
                 <div class="sidebar-content js-simplebar">
@@ -37,7 +36,7 @@
                         </li>
 
                         <li class="sidebar-item active">
-                            <a class="sidebar-link" href="index.html">
+                            <a class="sidebar-link" href="../TopManagementPanel/personnel.aspx">
                                 <i class="align-middle" data-feather="user-check"></i><span class="align-middle">Personeller</span>
                             </a>
                         </li>
@@ -95,8 +94,8 @@
                                 </a>
 
                                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                    <img src="../TopManagementPanel/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                    <span class="text-dark">Charles Hall</span>
+                                    <asp:Image ID="imgAvatar" runat="server" CssClass="avatar img-fluid rounded me-1" />
+                                    <asp:Label ID="lbl_name" runat="server" class="text-dark"></asp:Label>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i>Profile</a>
@@ -116,7 +115,7 @@
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
-                   <%-- <div class="container-fluid p-0">
+                    <%-- <div class="container-fluid p-0">
 
                         <h1 class="h3 mb-3"><strong>Anasayfa</strong></h1>
 

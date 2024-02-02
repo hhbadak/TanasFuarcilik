@@ -15,19 +15,21 @@
                                 <div class="card-header">
                                 </div>
                                 <div class="card-body text-center">
-                                    <img src="img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
-                                    <h5 class="card-title mb-0">Christina Mason</h5>
-                                    <div class="text-muted mb-2">Lead Developer</div>
-
+                                    <asp:Image ID="imgAvatar" runat="server" CssClass="avatar img-fluid rounded me-1" />
+                                    <h5 class="card-title mb-0">
+                                        <br />
+                                        <asp:Label ID="lbl_name" runat="server" class="text-dark"></asp:Label></h5>
+                                    <asp:Label ID="lbl_mission" runat="server" class="text-muted mb-2"></asp:Label>
+                                    
                                     <div>
-                                        <a class="btn btn-primary btn-sm" href="#">Follow</a>
-                                        <a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span>Message</a>
+                                        <br />
+                                        <a class="btn btn-primary btn-sm" href="#">Düzenle</a>
                                     </div>
                                 </div>
                                 <hr class="my-0" />
                             </div>
                         </div>
-                       
+
                     </div>
 
                 </div>
