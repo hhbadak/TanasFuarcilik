@@ -44,6 +44,7 @@
     <Compile Include="ConnectionStrings.cs" />
     <Compile Include="DataModel.cs" />
     <Compile Include="OurWork.cs" />
+    <Compile Include="OurWorkCategory.cs" />
     <Compile Include="Personnel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Status.cs" />

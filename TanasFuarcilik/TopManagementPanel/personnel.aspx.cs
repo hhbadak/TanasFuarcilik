@@ -23,7 +23,12 @@ namespace TanasFuarcilik.TopManagementPanel
 
         protected void lv_personnelList_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-
+            int id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "delete")
+            {
+                dm.PersonnelDelete(id);
+            }
+            data();
         }
     }
 }

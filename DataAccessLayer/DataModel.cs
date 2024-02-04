@@ -22,7 +22,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT COUNT(*) FROM Personnel WHERE Surname = @uname AND Password = @password";
+                cmd.CommandText = "SELECT COUNT(*) FROM Personnel WHERE Username = @uname AND Password = @password";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@uname", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -31,7 +31,7 @@ namespace DataAccessLayer
 
                 if (number > 0)
                 {
-                    cmd.CommandText = "SELECT * FROM Personnel  WHERE Surname = @uname AND Password = @password";
+                    cmd.CommandText = "SELECT * FROM Personnel  WHERE Username = @uname AND Password = @password";
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@uname", username);
                     cmd.Parameters.AddWithValue("@password", password);
@@ -41,7 +41,7 @@ namespace DataAccessLayer
                     {
                         p.ID = reader.GetInt32(0);
                         p.Name = reader.GetString(1);
-                        p.Surname = reader.GetString(2);
+                        p.Username  = reader.GetString(2);
                         p.Password = reader.GetString(3);
                         p.Mission = reader.GetString(4);
                         p.PhoneNumber = reader.GetString(5);
@@ -71,7 +71,7 @@ namespace DataAccessLayer
             try
             {
                 List<Personnel> personnels = new List<Personnel>();
-                cmd.CommandText = "SELECT Id, Name, Surname, PhoneNumber, EMail, Address, Img, Status FROM Personnel";
+                cmd.CommandText = "SELECT Id, Name, Username, PhoneNumber, EMail, Address, Img, Status FROM Personnel";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -80,7 +80,7 @@ namespace DataAccessLayer
                     Personnel p = new Personnel();
                     p.ID = reader.GetInt32(0);
                     p.Name = reader.GetString(1);
-                    p.Surname = reader.GetString(2);
+                    p.Username = reader.GetString(2);
                     p.PhoneNumber = reader.GetString(3);
                     p.EMail = reader.GetString(4);
                     p.Address = reader.GetString(5);
@@ -105,7 +105,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT ID, Name, Surname, Password, Mission, PhoneNumber, EMail, Address, Img FROM Personnel WHERE ID = @id";
+                cmd.CommandText = "SELECT ID, Name, Username, Password, Mission, PhoneNumber, EMail, Address, Img FROM Personnel WHERE ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -116,7 +116,7 @@ namespace DataAccessLayer
                 {
                     p.ID = reader.GetInt32(0);
                     p.Name = reader.GetString(1);
-                    p.Surname = reader.GetString(2);
+                    p.Username = reader.GetString(2);
                     p.Password = reader.GetString(3);
                     p.Mission = reader.GetString(4);
                     p.PhoneNumber = reader.GetString(5);
@@ -140,11 +140,11 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "UPDATE Personnel SET Name = @name, Surname = @surname, Password = @password, Mission = @mission, PhoneNumber = @phone, EMail = @mail, Address = @address, Img = @img WHERE ID = @id";
+                cmd.CommandText = "UPDATE Personnel SET Name = @name, Username = @urname, Password = @password, Mission = @mission, PhoneNumber = @phone, EMail = @mail, Address = @address, Img = @img WHERE ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", p.ID);
                 cmd.Parameters.AddWithValue("@name", p.Name);
-                cmd.Parameters.AddWithValue("@surname", p.Surname);
+                cmd.Parameters.AddWithValue("@urname", p.Username);
                 cmd.Parameters.AddWithValue("@password", p.Password);
                 cmd.Parameters.AddWithValue("@mission", p.Mission);
                 cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
@@ -172,10 +172,10 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Personnel(Name, Surname, Password, Mission, PhoneNumber, EMail, Address, Img, StatuID, Status) VALUES (@name, @surname, @password, @mission, @phone, @mail, @address, @img, @statuID @statu)";
+                cmd.CommandText = "INSERT INTO Personnel(Name, Username, Password, Mission, PhoneNumber, EMail, Address, Img, StatuID, Status) VALUES (@name, @urname, @password, @mission, @phone, @mail, @address, @img, @statuID, 1)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@name", p.Name);
-                cmd.Parameters.AddWithValue("@surname", p.Surname);
+                cmd.Parameters.AddWithValue("@surname", p.Username);
                 cmd.Parameters.AddWithValue("@password", p.Password);
                 cmd.Parameters.AddWithValue("@mission", p.Mission);
                 cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
@@ -196,6 +196,24 @@ namespace DataAccessLayer
             {
                 con.Close();
             }
+        }
+
+        public bool PersonnelDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE Personnel WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+            finally { con.Close(); }
         }
 
         #endregion
@@ -225,6 +243,66 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        #endregion
+
+        #region Category
+        public List<OurWorkCategory> CategoryList()
+        {
+            List<OurWorkCategory> category = new List<OurWorkCategory>();
+            try
+            {
+                cmd.CommandText = "SELECT ID, Name FROM OurWorkCategory";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    OurWorkCategory c = new OurWorkCategory();
+                    c.ID = reader.GetInt32(0);
+                    c.Name = reader.GetString(1);
+                    category.Add(c);
+                }
+                return category;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        #endregion
+
+        #region OutWork
+        public bool WorkCreate(Personnel p)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Personnel(Name, Username, Password, Mission, PhoneNumber, EMail, Address, Img, StatuID, Status) VALUES (@name, @urname, @password, @mission, @phone, @mail, @address, @img, @statuID, 1)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name", p.Name);
+                cmd.Parameters.AddWithValue("@surname", p.Username);
+                cmd.Parameters.AddWithValue("@password", p.Password);
+                cmd.Parameters.AddWithValue("@mission", p.Mission);
+                cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
+                cmd.Parameters.AddWithValue("@mail", p.EMail);
+                cmd.Parameters.AddWithValue("@address", p.Address);
+                cmd.Parameters.AddWithValue("@img", p.Image);
+                cmd.Parameters.AddWithValue("@statuID", p.StatuID);
+                cmd.Parameters.AddWithValue("@statu", p.Statu);
+                con.Open();
+                cmd.ExecuteReader();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         #endregion
     }
 }

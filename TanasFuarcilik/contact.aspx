@@ -16,7 +16,6 @@
             </div>
         </div>
     </section>
-
     <!--Start Contact Us
 	=========================================== -->
     <section class="contact-us" id="contact">

@@ -17,6 +17,8 @@ namespace TanasFuarcilik
         {
             if (!IsPostBack)
             {
+                ddl_statu.DataTextField = "Name";
+                ddl_statu.DataValueField = "ID";
                 ddl_statu.DataSource = dm.StatuList();
                 ddl_statu.DataBind();
             }
@@ -25,18 +27,17 @@ namespace TanasFuarcilik
         protected void lbtn_create_Click(object sender, EventArgs e)
         {
 
-            string address = tb_address.Value;
-            if (int.TryParse(ddl_statu.SelectedItem.Value, out int selectedValue) && selectedValue != 0)
+            if (Convert.ToInt32(ddl_statu.SelectedItem.Value) != 0)
             {
                 Personnel p = new Personnel();
                 p.Name = tb_name.Text;
-                p.Surname = tb_surname.Text;
+                p.Username = tb_username.Text;
                 p.Password = tb_password.Text;
                 p.Mission = tb_mission.Text;
                 p.PhoneNumber = tb_phone.Text;
                 p.EMail = tb_mail.Text;
                 p.Address = tb_address.Value;
-                p.StatuID = selectedValue;
+                p.StatuID = Convert.ToInt32(ddl_statu.SelectedItem.Value);
                 p.Statu = true;
                 if (fu_picture.HasFile)
                 {
@@ -52,7 +53,7 @@ namespace TanasFuarcilik
                             if (dm.PersonnelCreate(p))
                             {
                                 tb_name.Text = "";
-                                tb_surname.Text = "";
+                                tb_username.Text = "";
                                 tb_password.Text = "";
                                 tb_mission.Text = "";
                                 tb_phone.Text = "";
@@ -87,7 +88,7 @@ namespace TanasFuarcilik
                         if (dm.PersonnelCreate(p))
                         {
                             tb_name.Text = "";
-                            tb_surname.Text = "";
+                            tb_username.Text = "";
                             tb_password.Text = "";
                             tb_mission.Text = "";
                             tb_phone.Text = "";

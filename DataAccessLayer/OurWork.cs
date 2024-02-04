@@ -11,6 +11,7 @@ namespace DataAccessLayer
         public int ID { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
+        public int CategoryID { get; set; }
         public string Img1 { get; set; }
         public string Img2 { get; set; }
         public string Img3 { get; set; }

@@ -7,12 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TanasFuarcilik
+namespace TanasFuarcilik.TopManagementPanel
 {
 
 
-    public partial class addPersonnel
+    public partial class portfolioCreate
     {
+
+        /// <summary>
+        /// tb_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_name;
+
+        /// <summary>
+        /// ddl_categories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_categories;
 
         /// <summary>
         /// img_picture control.
@@ -33,76 +51,76 @@ namespace TanasFuarcilik
         protected global::System.Web.UI.WebControls.FileUpload fu_picture;
 
         /// <summary>
-        /// tb_name control.
+        /// img_picture2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_name;
+        protected global::System.Web.UI.WebControls.Image img_picture2;
 
         /// <summary>
-        /// tb_username control.
+        /// fu_picture2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_username;
+        protected global::System.Web.UI.WebControls.FileUpload fu_picture2;
 
         /// <summary>
-        /// tb_password control.
+        /// img_picture3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_password;
+        protected global::System.Web.UI.WebControls.Image img_picture3;
 
         /// <summary>
-        /// tb_mission control.
+        /// fu_picture3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_mission;
+        protected global::System.Web.UI.WebControls.FileUpload fu_picture3;
 
         /// <summary>
-        /// tb_phone control.
+        /// img_picture4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_phone;
+        protected global::System.Web.UI.WebControls.Image img_picture4;
 
         /// <summary>
-        /// tb_mail control.
+        /// fu_picture4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_mail;
+        protected global::System.Web.UI.WebControls.FileUpload fu_picture4;
 
         /// <summary>
-        /// tb_address control.
+        /// img_picture5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea tb_address;
+        protected global::System.Web.UI.WebControls.Image img_picture5;
 
         /// <summary>
-        /// ddl_statu control.
+        /// fu_picture5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_statu;
+        protected global::System.Web.UI.WebControls.FileUpload fu_picture5;
 
         /// <summary>
         /// pnl_successful control.

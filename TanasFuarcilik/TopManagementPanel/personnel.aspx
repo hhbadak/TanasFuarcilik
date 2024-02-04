@@ -16,8 +16,8 @@
                         <table class="table table-hover my-0">
                             <thead>
                                 <tr>
-                                    <th>Adı</th>
-                                    <th class="d-none d-xl-table-cell">Soyadı</th>
+                                    <th>Adı Soyadı</th>
+                                    <th class="d-none d-xl-table-cell">Kullanıcı Adı</th>
                                     <th class="d-none d-xl-table-cell">Telefon Numarası</th>
                                     <th>Durum</th>
                                     <th class="d-none d-md-table-cell">E Mail</th>
@@ -34,13 +34,13 @@
                     <ItemTemplate>
                         <tr>
                             <td><%# Eval("Name") %></td>
-                            <td><%# Eval("Surname") %></td>
+                            <td><%# Eval("Username") %></td>
                             <td><a href="tel:<%# Eval("PhoneNumber") %>"><%# Eval("PhoneNumber") %></a></td>
                             <td><%# Eval("StatuStr") %></td>
                             <td><a href="mailto:<%# Eval("EMail") %>"><%# Eval("EMail") %></a></td>
                             <td><%# Eval("Address") %></td>
                             <td>
-                                <img src="../TopManagementPanel/img/personnel/<%# Eval("Image") %>" /></td>
+                                <img src="../TopManagementPanel/img/personnel/<%# Eval("Image") %>" width="32" height="32" /></td>
                             <td>
                                 <a href="../TopManagementPanel/personnelSetting.aspx?mid=<%# Eval("ID") %>">
                                     <img src="../TopManagementPanel/img/icons/edit.png" alt="Güncelle" /></a>

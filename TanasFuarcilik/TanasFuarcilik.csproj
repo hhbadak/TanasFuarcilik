@@ -176,6 +176,7 @@
     <Content Include="portfolio.aspx" />
     <Content Include="service.aspx" />
     <Content Include="TopManagementPanel\css\app.css" />
+    <Content Include="TopManagementPanel\css\portfolio.css" />
     <Content Include="TopManagementPanel\img\avatars\avatar-2.jpg" />
     <Content Include="TopManagementPanel\img\avatars\avatar-3.jpg" />
     <Content Include="TopManagementPanel\img\avatars\avatar-4.jpg" />
@@ -193,7 +194,8 @@
     <Content Include="TopManagementPanel\js\app.js.LICENSE.txt" />
     <Content Include="TopManagementPanel\personnel.aspx" />
     <Content Include="TopManagementPanel\personnelSetting.aspx" />
-    <Content Include="TopManagementPanel\profile.aspx" />
+    <Content Include="TopManagementPanel\portfolio.aspx" />
+    <Content Include="TopManagementPanel\portfolioCreate.aspx" />
     <Content Include="TopManagementPanel\SignIn.aspx" />
     <Content Include="videos\tanas.mp4" />
     <Content Include="Web.config" />
@@ -277,12 +279,19 @@
     <Compile Include="TopManagementPanel\personnelSetting.aspx.designer.cs">
       <DependentUpon>personnelSetting.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TopManagementPanel\profile.aspx.cs">
-      <DependentUpon>profile.aspx</DependentUpon>
+    <Compile Include="TopManagementPanel\portfolio.aspx.cs">
+      <DependentUpon>portfolio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TopManagementPanel\profile.aspx.designer.cs">
-      <DependentUpon>profile.aspx</DependentUpon>
+    <Compile Include="TopManagementPanel\portfolio.aspx.designer.cs">
+      <DependentUpon>portfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopManagementPanel\portfolioCreate.aspx.cs">
+      <DependentUpon>portfolioCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\portfolioCreate.aspx.designer.cs">
+      <DependentUpon>portfolioCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="TopManagementPanel\SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>

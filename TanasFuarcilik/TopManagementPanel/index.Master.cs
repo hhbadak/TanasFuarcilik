@@ -17,7 +17,7 @@ namespace TanasFuarcilik.TopManagementPanel
             if (Session["person"] != null)
             {
                 Personnel p = (Personnel)Session["person"];
-                lbl_name.Text = p.Name + " " + p.Surname;
+                lbl_name.Text = p.Name;
                 imgAvatar.ImageUrl = "../TopManagementPanel/img/personnel/" + p.Image;
             }
             else
