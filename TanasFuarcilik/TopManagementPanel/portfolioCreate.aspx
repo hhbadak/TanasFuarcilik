@@ -21,8 +21,8 @@
 
                     <div class="form-group mb-4 col-md-6">
                         <span><mark>Resim 1</mark></span>
-                        <asp:Image ID="img_picture" runat="server" Width="100px" CssClass="mb-3" />
-                        <asp:FileUpload ID="fu_picture" runat="server"></asp:FileUpload>
+                        <asp:Image ID="img_picture1" runat="server" Width="100px" CssClass="mb-3" />
+                        <asp:FileUpload ID="fu_picture1" runat="server"></asp:FileUpload>
                     </div>
 
                     <div class="form-group mb-4 col-md-6">

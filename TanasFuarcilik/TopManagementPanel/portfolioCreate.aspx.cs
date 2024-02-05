@@ -33,49 +33,140 @@ namespace TanasFuarcilik.TopManagementPanel
 
                 List<string> imageNames = new List<string>();
 
-                for (int i = 1; i <= 5; i++)
+                // Resim 1
+                if (fu_picture1.HasFile)
                 {
-                    FileUpload fu_picture = (FileUpload)Page.FindControl("fu_picture" + i); 
-                    if (fu_picture.HasFile)
+                    FileInfo fi = new FileInfo(fu_picture1.FileName);
+                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
                     {
-                        FileInfo fi = new FileInfo(fu_picture.FileName);
-                        if (fi.Extension == ".jpg" || fi.Extension == ".png")
-                        {
-                            string extension = fi.Extension;
-                            string name = Guid.NewGuid().ToString();
-                            string imageName = name + extension;
-                            imageNames.Add(imageName); 
-                            fu_picture.SaveAs(Server.MapPath("~/TopManagementPanel/img/personnel/" + imageName));
-                        }
-                        else
-                        {
-                            pnl_unsuccessful.Visible = true;
-                            pnl_successful.Visible = false;
-                            lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
-                            return; 
-                        }
+                        string extension = fi.Extension;
+                        string name = Guid.NewGuid().ToString();
+                        string imageName = name + extension;
+                        imageNames.Add(imageName);
+                        fu_picture1.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
                     }
                     else
                     {
-                        imageNames.Add(null); 
+                        pnl_unsuccessful.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
+                        return;
                     }
                 }
+                else
+                {
+                    imageNames.Add("none.png");
+                }
 
+                // Resim 2
+                if (fu_picture2.HasFile)
+                {
+                    FileInfo fi = new FileInfo(fu_picture2.FileName);
+                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
+                    {
+                        string extension = fi.Extension;
+                        string name = Guid.NewGuid().ToString();
+                        string imageName = name + extension;
+                        imageNames.Add(imageName);
+                        fu_picture2.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                    }
+                    else
+                    {
+                        pnl_unsuccessful.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
+                        return;
+                    }
+                }
+                else
+                {
+                    imageNames.Add("none.png");
+                }
+
+                // Resim 3
+                if (fu_picture3.HasFile)
+                {
+                    FileInfo fi = new FileInfo(fu_picture3.FileName);
+                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
+                    {
+                        string extension = fi.Extension;
+                        string name = Guid.NewGuid().ToString();
+                        string imageName = name + extension;
+                        imageNames.Add(imageName);
+                        fu_picture3.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                    }
+                    else
+                    {
+                        pnl_unsuccessful.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
+                        return;
+                    }
+                }
+                else
+                {
+                    imageNames.Add("none.png");
+                }
+
+                // Resim 4
+                if (fu_picture4.HasFile)
+                {
+                    FileInfo fi = new FileInfo(fu_picture4.FileName);
+                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
+                    {
+                        string extension = fi.Extension;
+                        string name = Guid.NewGuid().ToString();
+                        string imageName = name + extension;
+                        imageNames.Add(imageName);
+                        fu_picture4.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                    }
+                    else
+                    {
+                        pnl_unsuccessful.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
+                        return;
+                    }
+                }
+                else
+                {
+                    imageNames.Add("none.png");
+                }
+
+                // Resim 5
+                if (fu_picture5.HasFile)
+                {
+                    FileInfo fi = new FileInfo(fu_picture5.FileName);
+                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
+                    {
+                        string extension = fi.Extension;
+                        string name = Guid.NewGuid().ToString();
+                        string imageName = name + extension;
+                        imageNames.Add(imageName);
+                        fu_picture5.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                    }
+                    else
+                    {
+                        pnl_unsuccessful.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_message.Text = "Resim uzantısı sadece .jpg veya .png olmalıdır.";
+                        return;
+                    }
+                }
+                else
+                {
+                    imageNames.Add("none.png");
+                }
                 try
                 {
-                    // Görüntü isimlerini personele ata
-                    o.Img1 = imageNames.Count >= 1 ? imageNames[0] : "none.png";
-                    o.Img2 = imageNames.Count >= 2 ? imageNames[1] : null;
-                    o.Img3 = imageNames.Count >= 3 ? imageNames[2] : null;
-                    o.Img4 = imageNames.Count >= 4 ? imageNames[3] : null;
-                    o.Img5 = imageNames.Count >= 5 ? imageNames[4] : null;
-
-                    if (dm.PersonnelCreate(o))
+                   
+                    if (dm.WorkCreate(o))
                     {
                         tb_name.Text = "";
                         ddl_categories.SelectedValue = "0";
                         pnl_unsuccessful.Visible = false;
                         pnl_successful.Visible = true;
+                        lbl_message.Text = "İş oluşturma başarıyla tamamlandı.";
                     }
                     else
                     {
@@ -86,14 +177,9 @@ namespace TanasFuarcilik.TopManagementPanel
                 {
                     pnl_unsuccessful.Visible = true;
                     pnl_successful.Visible = false;
-                    lbl_message.Text = ex.Message;
+                    lbl_message.Text = "Hata oluştu: " + ex.Message;
+                    return;
                 }
-            }
-            else
-            {
-                pnl_unsuccessful.Visible = true;
-                pnl_successful.Visible = false;
-                lbl_message.Text = "Durum seçimi yapmalısınız.";
             }
         }
     }

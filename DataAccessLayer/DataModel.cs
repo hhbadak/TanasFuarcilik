@@ -41,7 +41,7 @@ namespace DataAccessLayer
                     {
                         p.ID = reader.GetInt32(0);
                         p.Name = reader.GetString(1);
-                        p.Username  = reader.GetString(2);
+                        p.Username = reader.GetString(2);
                         p.Password = reader.GetString(3);
                         p.Mission = reader.GetString(4);
                         p.PhoneNumber = reader.GetString(5);
@@ -209,7 +209,7 @@ namespace DataAccessLayer
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch 
+            catch
             {
                 return false;
             }
@@ -273,22 +273,19 @@ namespace DataAccessLayer
         #endregion
 
         #region OutWork
-        public bool WorkCreate(Personnel p)
+        public bool WorkCreate(OurWork o)
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Personnel(Name, Username, Password, Mission, PhoneNumber, EMail, Address, Img, StatuID, Status) VALUES (@name, @urname, @password, @mission, @phone, @mail, @address, @img, @statuID, 1)";
+                cmd.CommandText = "INSERT INTO OurWork(Name, CategoryID, IMG1, IMG2, IMG3, IMG4, IMG5) VALUES (@name, @catid, @i1, @i2, @i3, @i4, @i5)";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name", p.Name);
-                cmd.Parameters.AddWithValue("@surname", p.Username);
-                cmd.Parameters.AddWithValue("@password", p.Password);
-                cmd.Parameters.AddWithValue("@mission", p.Mission);
-                cmd.Parameters.AddWithValue("@phone", p.PhoneNumber);
-                cmd.Parameters.AddWithValue("@mail", p.EMail);
-                cmd.Parameters.AddWithValue("@address", p.Address);
-                cmd.Parameters.AddWithValue("@img", p.Image);
-                cmd.Parameters.AddWithValue("@statuID", p.StatuID);
-                cmd.Parameters.AddWithValue("@statu", p.Statu);
+                cmd.Parameters.AddWithValue("@name", o.Name);
+                cmd.Parameters.AddWithValue("@catid", o.CategoryID);
+                cmd.Parameters.AddWithValue("@i1", o.Img1 ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@i2", o.Img2);
+                cmd.Parameters.AddWithValue("@i3", o.Img3);
+                cmd.Parameters.AddWithValue("@i4", o.Img4);
+                cmd.Parameters.AddWithValue("@i5", o.Img5);
                 con.Open();
                 cmd.ExecuteReader();
                 return true;

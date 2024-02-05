@@ -33,22 +33,22 @@ namespace TanasFuarcilik.TopManagementPanel
         protected global::System.Web.UI.WebControls.DropDownList ddl_categories;
 
         /// <summary>
-        /// img_picture control.
+        /// img_picture1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img_picture;
+        protected global::System.Web.UI.WebControls.Image img_picture1;
 
         /// <summary>
-        /// fu_picture control.
+        /// fu_picture1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_picture;
+        protected global::System.Web.UI.WebControls.FileUpload fu_picture1;
 
         /// <summary>
         /// img_picture2 control.
