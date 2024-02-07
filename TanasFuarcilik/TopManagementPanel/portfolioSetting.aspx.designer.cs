@@ -11,7 +11,7 @@ namespace TanasFuarcilik.TopManagementPanel
 {
 
 
-    public partial class portfolioCreate
+    public partial class portfolioSetting
     {
 
         /// <summary>

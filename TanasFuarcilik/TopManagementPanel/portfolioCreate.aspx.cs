@@ -20,6 +20,11 @@ namespace TanasFuarcilik.TopManagementPanel
                 ddl_categories.DataValueField = "ID";
                 ddl_categories.DataSource = dm.CategoryList();
                 ddl_categories.DataBind();
+
+                ddl_data.DataTextField = "Name";
+                ddl_data.DataValueField = "ID";
+                ddl_data.DataSource = dm.DataList();
+                ddl_data.DataBind();
             }
         }
 
@@ -30,7 +35,7 @@ namespace TanasFuarcilik.TopManagementPanel
                 OurWork o = new OurWork();
                 o.Name = tb_name.Text;
                 o.CategoryID = Convert.ToInt32(ddl_categories.SelectedItem.Value);
-
+                o.DataID = Convert.ToInt32(ddl_data.SelectedItem.Value);
                 List<string> imageNames = new List<string>();
 
                 // Resim 1
@@ -41,9 +46,8 @@ namespace TanasFuarcilik.TopManagementPanel
                     {
                         string extension = fi.Extension;
                         string name = Guid.NewGuid().ToString();
-                        string imageName = name + extension;
-                        imageNames.Add(imageName);
-                        fu_picture1.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                        o.Img1 = name + extension;
+                        fu_picture1.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + name + extension));
                     }
                     else
                     {
@@ -66,9 +70,8 @@ namespace TanasFuarcilik.TopManagementPanel
                     {
                         string extension = fi.Extension;
                         string name = Guid.NewGuid().ToString();
-                        string imageName = name + extension;
-                        imageNames.Add(imageName);
-                        fu_picture2.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                        o.Img2 = name + extension;
+                        fu_picture2.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + name + extension));
                     }
                     else
                     {
@@ -91,9 +94,8 @@ namespace TanasFuarcilik.TopManagementPanel
                     {
                         string extension = fi.Extension;
                         string name = Guid.NewGuid().ToString();
-                        string imageName = name + extension;
-                        imageNames.Add(imageName);
-                        fu_picture3.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                        o.Img3 = name + extension;
+                        fu_picture3.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + name + extension));
                     }
                     else
                     {
@@ -116,9 +118,8 @@ namespace TanasFuarcilik.TopManagementPanel
                     {
                         string extension = fi.Extension;
                         string name = Guid.NewGuid().ToString();
-                        string imageName = name + extension;
-                        imageNames.Add(imageName);
-                        fu_picture4.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                        o.Img4 = name + extension;
+                        fu_picture4.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + name + extension));
                     }
                     else
                     {
@@ -141,9 +142,8 @@ namespace TanasFuarcilik.TopManagementPanel
                     {
                         string extension = fi.Extension;
                         string name = Guid.NewGuid().ToString();
-                        string imageName = name + extension;
-                        imageNames.Add(imageName);
-                        fu_picture5.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + imageName));
+                        o.Img5 = name + extension;
+                        fu_picture5.SaveAs(Server.MapPath("~/TopManagementPanel/img/portfolio/" + name + extension));
                     }
                     else
                     {
@@ -159,7 +159,7 @@ namespace TanasFuarcilik.TopManagementPanel
                 }
                 try
                 {
-                   
+
                     if (dm.WorkCreate(o))
                     {
                         tb_name.Text = "";

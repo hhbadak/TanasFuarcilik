@@ -272,20 +272,51 @@ namespace DataAccessLayer
         }
         #endregion
 
+
+        #region Data
+        public List<OurWorkCategory> DataList()
+        {
+            List<OurWorkCategory> category = new List<OurWorkCategory>();
+            try
+            {
+                cmd.CommandText = "SELECT ID, Name FROM OurWorkData";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    OurWorkCategory c = new OurWorkCategory();
+                    c.ID = reader.GetInt32(0);
+                    c.Name = reader.GetString(1);
+                    category.Add(c);
+                }
+                return category;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        #endregion
+
+
         #region OutWork
         public bool WorkCreate(OurWork o)
         {
             try
             {
-                cmd.CommandText = "INSERT INTO OurWork(Name, CategoryID, IMG1, IMG2, IMG3, IMG4, IMG5) VALUES (@name, @catid, @i1, @i2, @i3, @i4, @i5)";
+                cmd.CommandText = "INSERT INTO OurWork(Name, CategoryID, DataID, IMG1, IMG2, IMG3, IMG4, IMG5) VALUES (@name, @catid, @did, @i1, @i2, @i3, @i4, @i5)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@name", o.Name);
-                cmd.Parameters.AddWithValue("@catid", o.CategoryID);
+                cmd.Parameters.AddWithValue("@catid", o.DataID);
+                cmd.Parameters.AddWithValue("@did", o.CategoryID);
                 cmd.Parameters.AddWithValue("@i1", o.Img1 ?? (object)DBNull.Value);
-                cmd.Parameters.AddWithValue("@i2", o.Img2);
-                cmd.Parameters.AddWithValue("@i3", o.Img3);
-                cmd.Parameters.AddWithValue("@i4", o.Img4);
-                cmd.Parameters.AddWithValue("@i5", o.Img5);
+                cmd.Parameters.AddWithValue("@i2", o.Img2 ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@i3", o.Img3 ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@i4", o.Img4 ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@i5", o.Img5 ?? (object)DBNull.Value);
+
                 con.Open();
                 cmd.ExecuteReader();
                 return true;
@@ -300,6 +331,74 @@ namespace DataAccessLayer
             }
         }
 
+
+        public List<OurWork> WorkList()
+        {
+            try
+            {
+                List<OurWork> works = new List<OurWork>();
+                cmd.CommandText = "SELECT o.ID, o.Name, c.Name, o.IMG1, d.Name  \r\nFROM OurWork AS o \r\nJOIN OurWorkCategory AS c ON o.CategoryID = c.ID\r\nJOIN OurWorkData AS d ON o.DataID = d.ID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    OurWork o = new OurWork();
+                    o.ID = reader.GetInt32(0);
+                    o.Name = reader.GetString(1);
+                    o.Category = reader.GetString(2);
+                    o.Img1 = reader.GetString(3);
+                    o.Data = reader.GetString(4);
+                    works.Add(o);
+                }
+                return works;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
+        public OurWork GetWork(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT o.ID, o.Name, c.Name, o.IMG1, o.IMG2, o.IMG3, o.IMG4, o.IMG5, d.Name \r\nFROM OurWork AS o \r\nJOIN OurWorkCategory AS c ON c.ID = o.CategoryID \r\nJOIN OutWorkData As d ON d.ID = o.DataID\r\nWHERE o.ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                OurWork o = new OurWork();
+                while (reader.Read())
+                {
+                    o.ID = reader.GetInt32(0);
+                    o.Name = reader.GetString(1);
+                    o.Category = reader.GetString(2);
+                    o.Data = reader.GetString(3);
+                    o.Img1 = reader.GetString(4);
+                    o.Img2 = reader.GetString(5);
+                    o.Img3 = reader.GetString(6);
+                    o.Img4 = reader.GetString(7);
+                    o.Img5 = reader.GetString(8);
+                    o.Data = reader.GetString(9);
+                }
+                return o;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         #endregion
     }
 }

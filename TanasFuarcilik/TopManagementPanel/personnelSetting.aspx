@@ -31,7 +31,7 @@
         </div>
         <div class="form-group mb-4">
             <textarea id="tb_address" class="form-control" runat="server" rows="3"></textarea>
-            <%-- <textarea runat="server" class="form-control" placeholder="Adresinizi Giriniz" rows="4"></textarea>--%>
+          
         </div>
 
         <div id="cf-submit">

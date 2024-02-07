@@ -17,62 +17,24 @@
                     <button type="button" data-filter="moduler">Moduler Fuar Stantları</button>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="special">
-                        <div class="card">
-                            <div class="portfolio-block">
-                                <img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Card with image and button</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="maxima, design">
-                        <div class="card">
-                            <div class="portfolio-block">
-                                <img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Card with image and button</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <asp:Repeater ID="Repeater1" runat="server">
+                        <ItemTemplate>
+                            <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="<%# Eval("Data") %>">
+                                <div class="card">
+                                    <div class="portfolio-block">
+                                        <img class="card-img-top" src='<%# "img/portfolio/" + Eval("IMG1") %>' alt='<%# Eval("Name") %>'>
+                                        <div class="card-header">
+                                            <h5 class="card-title"><%# Eval("Name") %></h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Kategori: <%# Eval("Category") %></p>
+                                            <a href="../TopManagementPanel/portfolioSetting.aspx?mid=<%# Eval("ID") %>" alt="Güncelle" class="btn btn-primary w-100">Güncelle</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                        <div class="card">
-                            <div class="portfolio-block">
-                                <img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Card with image and button</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                        <div class="card">
-                            <div class="portfolio-block">
-                                <img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Card with image and button</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
         </section>

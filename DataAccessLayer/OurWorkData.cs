@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class OurWorkCategory
+    public class OurWorkData
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public override string ToString()
-        {
-            return Name;
-        }
-        public string Data { get; set; }
     }
 }

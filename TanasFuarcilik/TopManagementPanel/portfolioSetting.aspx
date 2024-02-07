@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TopManagementPanel/index.Master" AutoEventWireup="true" CodeBehind="portfolioCreate.aspx.cs" Inherits="TanasFuarcilik.TopManagementPanel.portfolioCreate" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TopManagementPanel/index.Master" AutoEventWireup="true" CodeBehind="portfolioSetting.aspx.cs" Inherits="TanasFuarcilik.TopManagementPanel.portfolioSetting" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,8 +17,9 @@
                             <asp:ListItem Text="Kategori Seçiniz" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <div class="form-group mb-4 col-md-6">
-                        <asp:DropDownList ID="ddl_data" runat="server" CssClass="form-control" Font-Names="data" AppendDataBoundItems="true">
+
+                     <div class="form-group mb-4 col-md-6">
+                        <asp:DropDownList ID="ddl_data" runat="server" CssClass="form-control" Font-Names="category" AppendDataBoundItems="true">
                             <asp:ListItem Text="Kategori Seçiniz" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
@@ -61,11 +61,10 @@
                         <asp:Panel ID="pnl_unsuccessful" runat="server" CssClass="basarisiz" Visible="false">
                             <asp:Label ID="lbl_message" runat="server"></asp:Label>
                         </asp:Panel>
-                        <asp:LinkButton ID="lbtn_create" class="btn btn-dark" Width="100%" Text="Portfolyo EKLE" value="Submit" runat="server" OnClick="lbtn_create_Click" />
+                        <asp:LinkButton ID="lbtn_create" class="btn btn-dark" Width="100%" Text="Portfolyo EKLE" value="Submit" runat="server" OnClick="lbtn_create_Click"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </asp:Content>

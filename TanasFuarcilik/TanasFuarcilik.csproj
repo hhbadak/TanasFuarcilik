@@ -196,6 +196,7 @@
     <Content Include="TopManagementPanel\personnelSetting.aspx" />
     <Content Include="TopManagementPanel\portfolio.aspx" />
     <Content Include="TopManagementPanel\portfolioCreate.aspx" />
+    <Content Include="TopManagementPanel\portfolioSetting.aspx" />
     <Content Include="TopManagementPanel\SignIn.aspx" />
     <Content Include="videos\tanas.mp4" />
     <Content Include="Web.config" />
@@ -292,6 +293,13 @@
     </Compile>
     <Compile Include="TopManagementPanel\portfolioCreate.aspx.designer.cs">
       <DependentUpon>portfolioCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopManagementPanel\portfolioSetting.aspx.cs">
+      <DependentUpon>portfolioSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopManagementPanel\portfolioSetting.aspx.designer.cs">
+      <DependentUpon>portfolioSetting.aspx</DependentUpon>
     </Compile>
     <Compile Include="TopManagementPanel\SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
